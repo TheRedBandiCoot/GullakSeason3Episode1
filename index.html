@@ -27,6 +27,7 @@
 
         .container,
         .container-two,
+         .container-four,
         .container-three {
             display: flex;
             flex-direction: column;
@@ -87,14 +88,14 @@
     </div>
     <div class="container-two none">
         <h1 style="color: red;">SomeThing Went Error!!!!🚫🚫🚫</h1>
-        <h2 style="color: rgb(140, 140, 141);">Redirecting To Home in <span class="counter"></span> seconds</h2>
+        <h3 style="color: rgb(140, 140, 141);">Redirecting To Home in <span class="counter"></span> seconds</h2>
     </div>
     <div class="container-three none">
         <h1 style="color: red;">Just Kidding 😜😝😜😜😛</h1>
     </div>
-    <iframe class="none" width="100%"
-        src="https://rr5---sn-h5576ns6.c.drive.google.com/videoplayback?expire=1655208867&ei=Y0OoYrnuKcym-LYPmemdoA0&ip=223.223.144.31&cp=QVRKV0NfV1hUSFhPOkVxVUxQbmsxQWxiWnFNdG52aGh0ZDlqS01vZlNNVjRLcHFMZzduRzhxUWs&id=2626a1d615e8ef48&itag=37&source=webdrive&requiressl=yes&mh=4p&mm=32&mn=sn-h5576ns6&ms=su&mv=m&mvi=5&pl=22&sc=yes&ttl=transient&susc=dr&driveid=1f0r_DoqFpicdIdyPvMpEDWDv9mpKmqXb&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=1886.087&lmt=1655192956254925&mt=1655194101&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRQIhAPmbsTu_wVSFw8GOMkIc1n71Wya2O3eZONGR0HLwRDuLAiBvrYlChJJnctpVQ3sUSndVqIFk797b2_0Wv7-GLZ9U8g==&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRgIhAP6HIiwjn6jRq5VXL4bpIhULc8Z1Ed1aa6FWcJ0go8QXAiEAtbr6VYWrd2rKXORDnme5fKxSt_xw4wEIQqkzRY55BxI=&cpn=ztP3Om1UuzZVvjya&c=WEB_EMBEDDED_PLAYER&cver=1.20220612.00.00"
-        frameborder="0" allowfullscreen></iframe>
+    <div class="container-four none">
+      <h1><a href="https://drive.google.com/file/d/1f0r_DoqFpicdIdyPvMpEDWDv9mpKmqXb/view?usp=drivesdk"></a></h1>
+</div>
     <script>
 
 
@@ -104,6 +105,7 @@
             let container = document.querySelector(".container")
             let containerTwo = document.querySelector(".container-two")
             let containerThree = document.querySelector(".container-three")
+let containerFour = document.querySelector(".container-four")
             let iframe = document.querySelector("iframe")
             let input = document.querySelector("input");
             if (input.value === "please" || input.value === "Please") {
@@ -117,7 +119,7 @@
                         containerThree.classList.remove("none")
                         setTimeout(() => {
                             containerThree.classList.add("none")
-                            iframe.classList.remove("none")
+                            containerFour.classList.remove("none")
                         }, 1500);
                     }, 5000);
                 }, 800);
