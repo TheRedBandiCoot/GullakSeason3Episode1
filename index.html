@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gullak S3 Ep1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container,
+        .container-two,
+        .container-three {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            width: 80%;
+            text-align: center;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        span.new {
+            color: lightseagreen;
+            animation: 0.5s ani linear infinite alternate-reverse;
+            opacity: 0;
+        }
+
+        @keyframes ani {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        input {
+            border-radius: 25px;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+    <div class="container">
+        <h1>How to watch <br> <span>Season 3 Episode 1</span></h1>
+        <h3>To watch write <span class="new">"please"</span></h3>
+        <input type="text" onkeyup="fn()">
+    </div>
+    <div class="container-two none">
+        <h1 style="color: red;">SomeThing Went Error!!!!🚫🚫🚫</h1>
+        <h2 style="color: rgb(140, 140, 141);">Redirecting To Home in <span class="counter"></span> seconds</h2>
+    </div>
+    <div class="container-three none">
+        <h1 style="color: red;">Just Kidding 😜😝😜😜😛</h1>
+    </div>
+    <iframe class="none" width="100%"
+        src="https://rr5---sn-h5576ns6.c.drive.google.com/videoplayback?expire=1655208867&ei=Y0OoYrnuKcym-LYPmemdoA0&ip=223.223.144.31&cp=QVRKV0NfV1hUSFhPOkVxVUxQbmsxQWxiWnFNdG52aGh0ZDlqS01vZlNNVjRLcHFMZzduRzhxUWs&id=2626a1d615e8ef48&itag=37&source=webdrive&requiressl=yes&mh=4p&mm=32&mn=sn-h5576ns6&ms=su&mv=m&mvi=5&pl=22&sc=yes&ttl=transient&susc=dr&driveid=1f0r_DoqFpicdIdyPvMpEDWDv9mpKmqXb&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=1886.087&lmt=1655192956254925&mt=1655194101&subapp=DRIVE_WEB_FILE_VIEWER&txp=0011224&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRQIhAPmbsTu_wVSFw8GOMkIc1n71Wya2O3eZONGR0HLwRDuLAiBvrYlChJJnctpVQ3sUSndVqIFk797b2_0Wv7-GLZ9U8g==&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRgIhAP6HIiwjn6jRq5VXL4bpIhULc8Z1Ed1aa6FWcJ0go8QXAiEAtbr6VYWrd2rKXORDnme5fKxSt_xw4wEIQqkzRY55BxI=&cpn=ztP3Om1UuzZVvjya&c=WEB_EMBEDDED_PLAYER&cver=1.20220612.00.00"
+        frameborder="0" allowfullscreen></iframe>
+    <script>
+
+
+        let counter = document.querySelector(".counter")
+        counter.innerHTML = "5";
+        function fn() {
+            let container = document.querySelector(".container")
+            let containerTwo = document.querySelector(".container-two")
+            let containerThree = document.querySelector(".container-three")
+            let iframe = document.querySelector("iframe")
+            let input = document.querySelector("input");
+            if (input.value === "please" || input.value === "Please") {
+                input.style.color = "green";
+                setTimeout(() => {
+                    container.classList.add("none")
+                    containerTwo.classList.remove("none")
+                    count()
+                    setTimeout(() => {
+                        containerTwo.classList.add("none")
+                        containerThree.classList.remove("none")
+                        setTimeout(() => {
+                            containerThree.classList.add("none")
+                            iframe.classList.remove("none")
+                        }, 1500);
+                    }, 5000);
+                }, 800);
+            } else {
+                input.style.color = "red";
+            }
+        }
+
+        function count() {
+            if (counter.innerHTML > 0) {
+                setTimeout(() => {
+                    counter.innerHTML--;
+                    count();
+                }, 1000)
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
