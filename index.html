@@ -27,7 +27,6 @@
 
         .container,
         .container-two,
-         .container-four,
         .container-three {
             display: flex;
             flex-direction: column;
@@ -88,14 +87,13 @@
     </div>
     <div class="container-two none">
         <h1 style="color: red;">SomeThing Went Error!!!!🚫🚫🚫</h1>
-        <h3 style="color: rgb(140, 140, 141);">Redirecting To Home in <span class="counter"></span> seconds</h2>
+        <h2 style="color: rgb(140, 140, 141);">Redirecting To Home in <span class="counter"></span> seconds</h2>
     </div>
     <div class="container-three none">
         <h1 style="color: red;">Just Kidding 😜😝😜😜😛</h1>
     </div>
-    <div class="container-four none">
-      <h1><a href="https://drive.google.com/file/d/1f0r_DoqFpicdIdyPvMpEDWDv9mpKmqXb/view?usp=drivesdk">Video Link Here [CLICK HERE]</a></h1>
-</div>
+    <iframe class="none" src="https://drive.google.com/file/d/1f0r_DoqFpicdIdyPvMpEDWDv9mpKmqXb/preview" width="100%"
+        height="650vh" allow="autoplay" allowfullscreen></iframe>
     <script>
 
 
@@ -105,7 +103,6 @@
             let container = document.querySelector(".container")
             let containerTwo = document.querySelector(".container-two")
             let containerThree = document.querySelector(".container-three")
-let containerFour = document.querySelector(".container-four")
             let iframe = document.querySelector("iframe")
             let input = document.querySelector("input");
             if (input.value === "please" || input.value === "Please") {
@@ -119,7 +116,7 @@ let containerFour = document.querySelector(".container-four")
                         containerThree.classList.remove("none")
                         setTimeout(() => {
                             containerThree.classList.add("none")
-                            containerFour.classList.remove("none")
+                            iframe.classList.remove("none")
                         }, 1500);
                     }, 5000);
                 }, 800);
